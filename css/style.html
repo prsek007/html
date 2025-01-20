@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+        ul li {
+            color: red;
+            list-style-type: square;
+            
+        }        
+        
+        ul li {
+            color: red;
+            list-style-type: square;
+            
+        }
+    #odstavek1 { 
+        color: rgb(250, 250, 250);
+        font-size: 18px;
+        border: solid 2px rgb(123, 81, 2);
+        background-color: rgb(3, 117, 174);
+        padding: 5px;
+        text-align: center;
+
+    }
+    .krog {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        background-color: chartreuse;
+        border-radius: 50%;
+        border: 5px gray;
+        text-align: center;
+        margin: 50px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>CSS</h1>
+ <p>Običajni odstavek.</p> 
+     <p>CSS (Cascading Style Sheet) je namenjen oblikovanju html dokumenta. Pomembno je, da lahko dodajamo obliko oz. slog na različnih nivojih (cascading). Končna oblika je sestavljena iz vseh predhodnih nastavitev, obvelja pa tista, ki je nastavljena na zadnje, na najvišjem nivoju.</p>
+    <h2>Slog znotraj značke</h2>
+     
+    <p>To je najvišji nivo. Recimo, da bi naslednji odstavek radi imeli v modri pisavi. To nastavimo tako, da dodamo atribut style, znak =, narekovaje "" in znotraj narekovajev določomo barvo color: blue takole <code>&lt;p style="color: blue;"&gt;</code>. Za color je dvopičje in nato vrednost (blue). </p>
+    <p style="color: blue;"><code>&lt;p style="color: blue;"&gt;</code>Modra pisava<code>&lt;/p&gt;</code></p>
+    <p>Določimo lahko več nastavitev na primer sredinsko poravnavo (text-alingn: center). Več nastavitev ločimo s podpičjem ;.</p>
+    <p style="color: green; text-align: center;"><code>&lt;p style="color: green; text-align: center;"&gt;</code>Zelena pisava, poravnava na sredino<code>&lt;/p&gt;</code></p>
+
+    <h2>Znotraj značke <code>style</code></h2>
+    <p>Če bi radi oblikovali spletno stran tako, da večkrat uporabljamo enako oblikovanje, ni pa smiselno, da enako kodo večkrat kopiramo, oblikovanje določimo znotraj značke <code>&lt;style&gt;</code>, ki je postavimo znotraj značke <code>&lt;head&gt;</code> na začetku html kode. Sintaksa je malce drugačna 
+    in sicer naprej napišemo ime značke, nastavitve pa podajamo znotraj zavitih oklepajev. <code>&lt;style&gt; h2 {color: orange; text-align: center; }&lt;/style&gt;</code>.</p>
+    
+    
+    <p><code>&lt;style&gt; ul li {color: red; list-style-type: square; }&lt;/style&gt;</code>.</p>
+    <ul>
+        <li>jabolka</li>
+        <li>hruške</li>
+        <li>slive</li>
+    </ul>
+    <ol>
+        <li>ponedeljek</li>
+        <li>torek</li>
+        <li>sreda</li>
+    </ol>
+    <h2>Zunanja datoteka</h2>
+    <p>Zunanja datoteka ima kar nekaj prednosti:</p>
+        <ul>
+            <li>ni sloga na začetku spletne strani, zato je sama stran krajša in bolj pregledna</li>
+            <li>isti slog lahko uporabim za več spletnih strani</li>
+            <li>z eno spremembo lahko spremenim izgled na vseh spletnih straneh</li>
+            <li>vse strani, ki so povezave z istim slogom, imajo enak izgled</li>
+        </ul>
+    <p>stran z zunanjim slogom vdelam zelo preprosto. Naredim spletne dokument s končnico css npr. slog.css in v spletni strani, v glavi dodam <code>&lt;link src="stylesheet" href="slog.css"&gt;</code>. 
+        V to datoteko pa shranim sloge, kot če bi jih pisal v znački <code>&lt;style&gt;body {background-color: black;}&lt;/style&gt;</code> in tako naprej, le da značke style sploh ne pišemo. </p>
+        <h3>Primer:</h3>
+        <p>V datoteko slog.css shranimo tako vsebino.</p>
+<div class='codeDiv'>
+body {
+    background-color: antiquewhite;
+    color: rgb(27, 27, 27) ;
+}
+h2 {
+    color: orange;
+    text-align: center;
+}
+ul li {
+    color: red;
+    list-style-type: square;
+}
+ul li {
+    color: red;
+    list-style-type: square;
+}
+</div>
+<h2>Oblika pisanja</h2>
+<p>Navodila za css, podobmno kot html lahko pišemo vsa v eno vrstico, eno pod drugo ali kakor želimo, pomembno je, da vsako značko najprej navedemo, potem pa v zavitih oklepajih navajamo lastnosti, vrednosti ločimo z dvopičjem, lastnosti pa s podpičjem.</p>
+<h3>Priporočilo</h3>
+<p>Ne glede na prejšnjo trditev, pa obstajapriporočilo, ki pravi, da je najbolje, da ime značke in nato vsako lastnost posebej damo v svojo vrstco, lastnosti še malo zamaknemo (za en o tabulatorsko mesto), da je vse skupaj dosti bolj pregledno (glej primer zgoraj).</p>
+</code>
+<h2>Multiple selector - , (vejica)</h2>
+<p>Hkrati lahko vplivamo naveč elementov tako, da med različne značke dodamo vejico npr. <code>th, td { border: colod 3px gray; }</code> določi siv okvir debeline 1px za oba elementa th in td</p>
+<h2>id - # (lojtra)</h2>
+<p>Elementu lahko določimo id, kar je primerno, če bi le enemu določenemu elementu želeli dodali obliko ali povezavo nanj. Za sklic na ta element uporabimo znak lojtra in id elementa. </p>
+<p>Primer</p>
+<div class='codeDiv'>
+&lt;style&gt;
+#odstavek1 {
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    border: solid 2px rgb(123, 81, 2);
+    background-color: rgb(3, 117, 174);
+    padding: 5px;
+    text-align: center;
+}
+&lt;/style&gt;
+</div>
+<p id="odstavek1">&lt;p id="odstavek1"&gt;Odstavek bela pisava, velikost pisave 18px, rjav rob 2px, modro ozadje, odmik 5px, besedilo poravnano na sredino.&lt;/p&gt;</p>
+<h2>class - . (pika)</h2>
+<p>Bolj pogosto kot id, uporabljamo class vendar class običajno uporabljamo, ko želimo enak slog dodati večim elementom hkrati.</p>
+<h3>Primer:</h3>
+
+
+<div class='codeDiv'>
+&lt;div class='codeDiv'&gt;
+&lt;style&gt;
+#odstavek1 {
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    border: solid 2px rgb(123, 81, 2);
+    background-color: rgb(3, 117, 174);
+    padding: 5px;
+    text-align: center;
+    }
+&lt;/style&gt;
+</div>
+
+<div class="krog">&lt;div class="krog"&gt;Krog 1&lt;/div&gt;</div>
+<div class="krog">&lt;div class="krog"&gt;Krog 2&lt;/div&gt;</div>
+<div class="krog">&lt;div class="krog"&gt;Krog 3&lt;/div&gt;</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osnovna navodila</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+     
+
+    </style>
+
+</head>
+<body onload="stejDoDeset()">
+<h1>Osnovna navodila</h1>
+<p>Podobno kot css, lahko JavaScript kodo pišemo na različnih mestih, znotraj značke <code>script</code> v glavi dokumenta, v vrstici ali v telesu dokumenta (body) na koncu strani ali kot zunanjo datoteko.</p>
+
+
+
+<h2>V glavi dokumenta</h2>
+<p>V tem primeru damo značko <code>script</code> v glavo dokumenta in znotraj tega napišemo kodo.</p>
+<div class="codeDiv">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Naslov strani&lt;/title&gt;
+  &lt;script&gt;
+    // JavaScript koda
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+<h2>V vrstici</h2>
+<p>V tem primeru kar v vrstici, kjer želimo, da se koda izvrši, kodo napišemo, prav tako znotraj značke <code>script</code> </p>
+<div class="codeDiv">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Naslov strani&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Tukaj je JavaScript koda &lt;script&gt; // JavaScript koda &lt;/script&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+<h2>V telesu dokumenta, na koncu</h2>
+<p>V tem primeru, ki se koda znotraj značke <code>script</code> piše pod celotno kodo html, tik pred zaprtjem značke <code>&lt;/body&gt;</code></p>
+
+<div class="codeDiv">
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Naslov strani&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt;Celotna vsebina html dokumenta.&lt;/p&gt;
+    &lt;script&gt;
+        // JavaScript koda
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</div>
+<h2>Zunanja datoteka</h2>
+<p>Najpogosteje se uporablja pisanje JavaCsript kode v zunanji datoteki, saj to med drugim omogoča večjo preglednost html strani ter uporabo iste JavaScript kode na večih dokumentih.</p>
+<div class="codeDiv">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Naslov strani&lt;/title&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+<h1>Osnovna sintaksa</h1>
+<p>Sintaksa so pravila pisanja kode, ki jih zahteva določeni programski jezik. Pri javaScriptu, 
+    tako kot pri html in css lahko vse ukaze pišemo v eno vrstico vendar je vsak programski stavek od naslednjega ločen s podpičjem. Tako pisanje 
+je sicer dovoljeno vendar nikakor <strong>ni priporočljivo</strong> saj je popolnoma nepregledno in je zelo težko iskati morebitne napake.</p>
+<dl>
+
+    <dt>Podpičje</dt>
+        <dd>Vsak programski stavek zaključimo s podpičjem <code>var i = 10;</code>. </dd><dd>Priporoča se, da je vsak stavek v svoji vrstici.</dd>
+    <dt>Blok</dt>
+        <dd>Vsak blok kode je znotraj zavitih oklepajev { // blok kode }.</dd>
+        <dd> Priporoča se, da je koda v bloku zamaknjena za eno tabulatorsko mesto oz. 3-5 presledkov, odvisno od nastavitev programa za pisanje kode.</dd>
+    <dt>Imena spremenljivk</dt>
+        <dd>Imena spremenljivk se morajo začeti s črko, podčrtajem ali znakom dolar ($) in ne smejo vsebovati posebnih znakov (@[]>!"#$% itd.) razen podčrtaja, prav tako ime spremenljivke ne sme vsebovati čšž in presledkov.</dd>
+        <dd>Priporoča se, da je ime smiselno in spominja na vrednosti, ki so v njej hranjene ter da se začne z malo črko, vsaka naslednja beseda pa z veliko črko (camelCase) npr: <code>var danesJeLepSoncenDan = true;</code></dd>    
+    <dt>Funkcije</dt>
+        <dd>Vsaka funkcija ima ime in oklepaje <code>danVTednu()</code>.</dd>
+        <dd>Za imena velja enako kot za spremenljivke.</dd> </dd>
+
+</dl>
+<h3>Primer</h3>
+<div class='codeDiv'>
+&lt;script&gt;
+function stejDoDeset() {
+        for (let i = 1; i &lt; 11; i++) {
+        console.log(i);
+    }
+}
+&lt;/script&gt;
+</div>
+    
+    
+ <h2>Osnovna sintaksa</h2>
+ <h3>Spremenljivke</h3>
+<div class='codeDiv'>
+let ime = "Janez";
+const starost = 25;
+</div>
+<h2>Funkcije</h2>
+
+<div class='codeDiv'>
+function pozdrav() {
+    alert("Pozdravljeni!");
+}
+</div>
+<h2>Dogodki</h2>
+<p>JavaScript lahko uporabite za obdelavo dogodkov, kot so kliki, premiki miške itd.</p>
+<h3>Primer</h3>
+
+<div class='codeDiv'>
+&lt;button onclick="pozdrav()"&gt;Klikni me&lt;/button&gt;
+</div>
+<h2>Manipulacija DOM (Document Object Model)</h2>
+<p>JavaScript omogoča spreminjanje vsebine HTML dokumenta.</p>
+
+<h3>Primer</h3>
+<div class='codeDiv'>
+document.getElementById("mojElement").innerHTML = "Nova vsebina";
+</div>
+
+<script>
+    function stejDoDeset() {
+        for (let i = 1; i < 11; i++) {
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>

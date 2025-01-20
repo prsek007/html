@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spremenljivke</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+
+</head>
+<body>
+
+<h1>Spremenljivke</h1>
+
+ <p>Spremenljivke so osnovni gradniki programiranja, ki jih uporabljamo za shranjevanje podatkov. Predstavljaj si jih kot
+škatle, v katere lahko spraviš različne vrednosti, kot so številke, besedila ali logične vrednosti. Tukaj je nekaj
+ključnih točk o spremenljivkah:</p>
+
+<h2>Definiranje spremenljivk</h2>
+<p>V JavaScriptu lahko spremenljivke definiramo z <code>var</code>, <code>let</code> ali <code>const</code>.</p>
+<div class="codeDiv">
+let ime = "Jaka"; // Uporabimo let za spremenljive vrednosti
+const starost = 13; // Uporabimo const za nespremenljive vrednosti
+</div>
+<h2>Uporaba spremenljivk</h2>
+<p>Ko enkrat definiramo spremenljivko, jo lahko uporabimo v naši kodi.</p>
+<div class="codeDiv">
+console.log("Ime: " + ime); // Ime: Jaka
+console.log("Starost: " + starost); // Starost: 13    
+</div>
+<h2>Spreminjanje vrednosti</h2>
+<p>Spremenljivkam, definiranih z let ali var, lahko spremenimo vrednost.</p>
+<div class="codeDiv">
+ime = "Marko";
+console.log("Novo ime: " + ime); // Novo ime: Marko
+</div>
+<h2>Pravila za poimenovanje</h2>
+<p>Imena spremenljivk morajo začeti s črko, podčrtajem (_) ali dolarjem ($).</p>
+<p>Ne smejo vsebovati presledkov ali posebnih znakov (razen podčrtaja in dolarja).
+</p>
+<div class="codeDiv">
+let _mojaSpremenljivka = 10;
+let $cena = 99.99;
+</div> 
+
+
+    <script src="script.js"> 
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

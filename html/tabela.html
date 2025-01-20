@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1>Tabela</h1>
+    <p>Tabela le za začetek nekoliko bolj zakomplicirana, na začetku dodamo značko <code>&lt;table&gt;</code>, da ustvarimo tabelo, potem moramo dodati značko table row za vrstico <code>&lt;tr&gt;</code> in potem 
+    dodajati značke table data za vsako celico posebej <code>&lt;td&gt;</code></p>
+
+    <pre><code>
+    &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Prva vrstica, celica 1
+            &lt;/td&gt;
+            &lt;td&gt;
+                Prva vrstica, celica 2
+            &lt;/td&gt;
+            &lt;td&gt;
+                Prva vrstica, celica 3
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Druga vrstica, celica 1
+            &lt;/td&gt;
+            &lt;td&gt;
+                Druga vrstica, celica 2
+            &lt;/td&gt;
+            &lt;td&gt;
+                Druga vrstica, celica 3
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+</code></pre>
+    <table border="1">
+        <tr>
+            <td>
+                Prva vrstica, celica 1
+            </td>
+            <td>
+                Prva vrstica, celica 2
+            </td>
+            <td>
+                Prva vrstica, celica 3
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Druga vrstica, celica 1
+            </td>
+            <td>
+                Druga vrstica, celica 2
+            </td>
+            <td>
+                Druga vrstica, celica 3
+            </td>
+        </tr>
+    </table>
+
+    <h2>Naprednejša tabela</h2>
+    <p>Dodani sta znački <code>&lt;thead&gt;</code> za glavo in <code>&lt;tbody&gt;</code> za telo tabele. V glavi je namesto značke <code>&lt;td&gt;</code> uporabljena značka <code>&lt;th&gt;</code>, kar pomeni table head oziroma naslovna celica.</p>
+
+    <pre><code>
+        &lt;table border="1" class="dataframe"&gt;
+            &lt;thead&gt;
+                &lt;tr style="text-align: right;"&gt;
+                    &lt;th&gt;Model avtomobila&lt;/th&gt;
+                    &lt;th&gt;Leto&lt;/th&gt;
+                    &lt;th&gt;Tip&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Tesla Model S&lt;/td&gt;
+                    &lt;td&gt;2022&lt;/td&gt;
+                    &lt;td&gt;Električni&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Ford Mustang&lt;/td&gt;
+                    &lt;td&gt;2021&lt;/td&gt;
+                    &lt;td&gt;Športni&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Chevrolet Camaro&lt;/td&gt;
+                    &lt;td&gt;2020&lt;/td&gt;
+                    &lt;td&gt;Športni&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;BMW 3 Series&lt;/td&gt;
+                    &lt;td&gt;2019&lt;/td&gt;
+                    &lt;td&gt;Limuzina&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Audi A4&lt;/td&gt;
+                    &lt;td&gt;2018&lt;/td&gt;
+                    &lt;td&gt;Limuzina&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table>
+
+    </code></pre>
+<table border="1" class="dataframe">
+    <thead>
+        <tr style="text-align: right;">
+            <th>Model avtomobila</th>
+            <th>Leto</th>
+            <th>Tip</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tesla Model S</td>
+            <td>2022</td>
+            <td>Električni</td>
+        </tr>
+        <tr>
+            <td>Ford Mustang</td>
+            <td>2021</td>
+            <td>Športni</td>
+        </tr>
+        <tr>
+            <td>Chevrolet Camaro</td>
+            <td>2020</td>
+            <td>Športni</td>
+        </tr>
+        <tr>
+            <td>BMW 3 Series</td>
+            <td>2019</td>
+            <td>Limuzina</td>
+        </tr>
+        <tr>
+            <td>Audi A4</td>
+            <td>2018</td>
+            <td>Limuzina</td>
+        </tr>
+    </tbody>
+</table>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

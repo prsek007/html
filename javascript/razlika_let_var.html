@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razlika med var in let</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+     
+
+    </style>
+
+</head>
+<body>
+    <h1>Razlika med <code>var</code> in <code>let</code></h1>
+    <p>Razlika med <code>var</code> in <code>let</code> v JavaScriptu je pomembna, saj vpliva na obseg (scope) in vedenje spremenljivk.</p>
+    <h2>Nekaj ključnih razlik</h2>
+    <h3>Obseg (Scope)</h3>
+<p><code>var</code> ima funkcijski obseg (function scope), kar pomeni, da je spremenljivka dostopna znotraj funkcije, v kateri je
+definirana.</p>
+
+<div class="codeDiv">
+function testVar() {
+if (true) {
+var x = 10;
+}
+console.log(x); // 10 (x je dostopen zunaj if bloka)
+}
+</div>
+<p><code>let</code> ima blokovni obseg (block scope), kar pomeni, da je spremenljivka dostopna samo znotraj bloka kode, kjer je
+definirana (npr. znotraj {}).</p>
+<div class="codeDiv">
+function testLet() {
+if (true) {
+let y = 10;
+}
+console.log(y); // ReferenceError: y is not defined (y ni dostopen zunaj if bloka)
+}
+</div>
+<h3>Ponovno definiranje</h3>
+
+<p>Spremenljivke, definirane z <code>var</code>, je mogoče ponovno definirati znotraj istega obsega.</p>
+
+<div class="codeDiv">
+var a = 1;
+var a = 2; // Veljavno
+</div>
+<p>Spremenljivke, definirane z <code>let</code>, ni mogoče ponovno definirati znotraj istega obsega.</p>
+<div class="codeDiv">
+let b = 1;
+let b = 2; // SyntaxError: Identifier 'b' has already been declared    
+</div>
+<h3>Dviganje (Hoisting):</h3>
+<p>Spremenljivke, definirane z <code>var</code>, so dvignjene (hoisted) na vrh njihovega obsega in inicializirane z undefined.</p>
+
+<div class="codeDiv">
+console.log(c); // undefined
+var c = 3;
+</div>
+<p>Spremenljivke, definirane z <code>let</code>, so prav tako dvignjene, vendar niso inicializirane. Dostop do njih pred inicializacijo povzroči napako.</p>
+
+<div class="codeDiv">
+console.log(d); // ReferenceError: Cannot access 'd' before initialization
+let d = 3;
+</div>
+<p>Te razlike so pomembne za razumevanje, kako se spremenljivke obnašajo v različnih delih kode in kako se izogniti
+napakam. Če imaš še kakšno vprašanje ali potrebuješ dodatne primere, mi sporoči!</p>
+
+
+</div>
+
+</body>
+</html>

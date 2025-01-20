@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrazec</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1>Obrazci</h1>
+    <p>
+        <form>
+            <input type="text" placeholder="ime in priimek" name="ime">
+            <input type="submit">
+        </form>
+    </p>
+    <p>
+        <form>
+            <div>
+                <input name="uporabnisko_ime" type="text" placeholder="Uporabniško ime">
+                <input name="geslo" type="password" placeholder="Geslo">
+            </div>
+            <div>
+                Najljubša barva avtomobila: 
+                <input name="color" type="radio" value="rdeca"> Rdeča
+                <input name="color" type="radio" value="zelena"> Zelena
+                <input name="color" type="radio" value="modara"> Modra
+                <input name="color" type="radio" value="other"> Druga
+            </div>
+            <div>
+                <input name="drzava" list="drzave" placeholder="Država">
+                <datalist id="drzave">
+                    <option value="Slo">Slovenija</option>
+                    <option value="Avstrija">Avstrija</option>
+                    <option value="Hrvaška">Hrvaška</option>
+                    <option value="Italija">Italija</option>
+                    <option value="Nizozemska">Nizozemska</option>
+                    <option value="Madžarska">Madžarska</option>
+                    <option value="Francija">Francija</option>
+                    <option value="Slovaška">Slovaška</option>
+                </datalist>
+            </div>
+        </form>
+    </p>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

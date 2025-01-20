@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - vrstni red</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+td, tr {
+    border: 1px solod black;
+    border-collapse: collapse;
+    background-color: rgb(158, 159, 159);
+    text-align: center;
+}
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    background-color: rgb(3, 82, 202);
+}
+
+button:hover {
+    background-color: brown;
+}
+    </style>
+
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>a, d, c</td>
+            <td>td, th</td>
+            <td>izbere več elementov</td>
+        </tr>
+        <tr>
+            <td>a d</td>
+            <td>ul li</td>
+            <td>vsi elementi b, ki so znotraj elementa a</td>
+        </tr>
+        <tr>
+            <td>a > d</td>
+            <td>ol > li</td>
+            <td>Izbere elemente b, ki so otroci elementa b</td>
+        </tr>
+        <tr>
+            <td>a + b</td>
+            <td>+</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>a[b]</td>
+            <td>img[src="jabolko.jpg"</td>
+            <td>izbere element iz a glede na določen atribut b img[src="jabolko.jpg" { width: 20px; }</td>
+        </tr>
+        <tr>
+            <td>a:b</td>
+            <td>a:hover</td>
+            <td>Pseudorazred selektor, pod določenimi pogoji</td>
+        </tr>
+        <tr>
+            <td>a::b</td>
+            <td>:</td>
+            <td>Pseudoelement selektor</td>
+        </tr>
+
+
+
+    </table>
+
+    <p></p>
+    <p><button>Klikni me</button></p>
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

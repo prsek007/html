@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - vrstni red</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+#moder {
+    color: blue;
+}
+.zelen {
+    color: green;
+}
+p {
+    color: rgb(218, 215, 8);
+
+}
+    </style>
+
+</head>
+<body>
+    <h1>CSS - vrstni red</h1>
+    <p>Pommebno je, da vemo, da obstaja prioriteta pomembnosti posameznih selektorjev, kaj nadvlada. Najvišji nivo je seveda inline style, to je kot atrubut znotraj značke.</p>
+
+<ol>
+    <li>inline</li>
+    <li>id</li>
+    <li>class</li>
+    <li>type</li>
+</ol>
+
+<p>Navaden odstavek</p>
+<p id="moder" >id="moder"</p>
+<p id="moder" class="zelen">id="moder" class="zelen" - id prevlada nad class</p>
+<p class="zelen">class="zelen"</p>
+<p id="moder" class="zelen" style="color: red">id="moder" class="zelen" style="color: red" - inline style prevlada nad vsemi</p>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

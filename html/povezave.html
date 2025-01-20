@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogrodje spletne strani</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1 id="vrh">Povezave</h1>
+    <p><code> &lt;h1 id="vrh"&gt;Povezave&lt;/h1&gt;</code></p>
+    <h2>Povezava iz besedila</h2>
+    <p>Za povezavo uporavljamo značko <code>a</code>, skupaj z obveznim atributom <code>href</code>. Torej <code>&lt;a href="https://www.os-tisina.si"&gt;OŠ Tišina&lt;a&gt;</code>.</p> 
+    <p>Povezava na spletno stran <a href="https://www.os-tisina.si/">Osnovne šole Tišina.</a></p>
+    <h3>Povezava na nov jeziček</h3>
+    <p>Dodamo lahko tudi atribut <code>target="_blank"</code>, kar pomeni, da se bo stran odprla v novem jezičku brskalnika in <code>title="napis, ki se prikaže, ko se postavimo na povezavo."</code>.</p>
+    <p>Povezava na spletno stran <a href="https://scholar.google.si/" target="_blank" title="Google Učenjak za boljšo iskalno izkušnjo.">Google Učenjak.</a></p>
+    <h2>Povezava preko slike</h2>
+    <a href="https://www.os-tisina.si/" target="_blank" title="Spletna stran OŠ Tišina">
+        <img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" alt="logo oš tišina" width="150">
+    </a>
+    <h2>Povezava - relativna pot</h2>
+    <p>Za pozavavo do spletne strani lahko uporabimo absolutno ali relativno pot. Absolutna je popolna pot, običajno se začne s <code>https://</code> in tako naprej. Relativna pot pa je pot glede na mesto, na keterem se trenutno nahajamo. 
+    Če se želimo sklicevati na datoteko v isti mapi, le napišemo ime datateke, ne celotne poti <code>&lt;a href="slika.html"&gt;
+    <a href="slika.html">Spletna stran s fotografijo</a>&lt;/a&gt;</code>. V podmapo bi se prestavili tako, da dodamo ime mape npr. <code>slike/slika.html</code>, v podmapo pa tako, da dodamo dve piki pred poševnico <code>../slika.html</code>, kar pomeni podmapa oziroma <code>../../slika.html</code>, pod pod mapa.</p>
+    <h2>Povezava znotraj iste strani</h2>
+    <p>Povezava snotraj iste spletne strani se lahko uporablja za npr. kazalo. Pomembno je, da naprej elementu, do katerega želimo narediti povezavo, določimo id in dodamo ime oziroma sidro, na katerega se bmomo s povezavo sklicevali <code>id="sirdo"</code>. Ime si izmislimo sami vendar naj bo besedilo brez presledkov, čšž, !"#$%&/() in podobnih znakov.</p>
+    <p>Naslovu zgoraj, smo dodali id <code> &lt;h1 id="vrh"&gt;Povezave&lt;/h1&gt;</code>, sedaj pa naredimo povezavo, ki se začne z znakom # in id imenom  <code>&lt;a href="#vrh"&gt;<a href="#vrh">Na vrh</a>&lt;/a&gt;</code>.</p>
+    
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

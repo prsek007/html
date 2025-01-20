@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogrodje spletne strani</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1>Vstavljanje slike na spletno stran</h1>
+    <p>Za vstavljanje slike na spletno stran uporabljamo značko <code>img</code>, skupaj z obveznim atributom <code>src</code>. Torej <code>&lt;img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" /&gt;</code> Opazimo, da značka <code>img</code> nima zaključne značke.</p> 
+    <div><img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" title="Logo OŠ Tišina." alt="Logotip Osnovne šole Tišina" /></div>
+    <p>Ker je slika prevelika, jo lahko zmanjšamo z atributom <code>width="200"</code></p>
+    <div><img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" title="Logo OŠ Tišina." alt="Logotip Osnovne šole Tišina" width="200"/></div>
+
+    <p>ali <code>height="250"</code>.</p>
+    <div><img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" title="Logo OŠ Tišina." alt="Logotip Osnovne šole Tišina" height="250"/></div>
+    <p>Ne priporočam pa uporabe obeh parametrov <code>width="400" height="100"</code>, saj bomo spremelili razmerje med širino in višino slike</p>
+    <div><img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" title="Logo OŠ Tišina." alt="Logotip Osnovne šole Tišina" width="400" height="100" /></div>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretvorbe tipa spremenljivke</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+    </style>
+
+</head>
+<body>
+<h1>Pretvorbe tipa spremenljivke</h1>
+<p>Poznamo različne tipe spremenljivk npr: celo število (Int), decimalno število (Float), besedilo (String), prav narobe (Boolean)... Pogosto moramo pretvoriti iz enega tipa v drug tip.</p> 
+<h2>Pretvorba v niz (String)</h2>
+<p>String() funkcija:</p>
+<div class='codeDiv'>
+let stevilo = 123;
+let niz = String(stevilo); // "123"
+</div>
+
+<p>toString() metoda:</p>
+<div class='codeDiv'>
+let stevilo = 123;
+let niz = stevilo.toString(); // "123"
+</div>
+
+<h2>Pretvorba v število (Number)</h2>
+<p>Number() funkcija:</p>
+<div class='codeDiv'>
+let niz = "123";
+let stevilo = Number(niz); // 123
+</div>
+
+<p>parseInt() funkcija:</p>
+<div class='codeDiv'>
+let niz = "123";
+let stevilo = parseInt(niz); // 123
+</div>
+
+<p>parseFloat() funkcija:</p>
+<div class='codeDiv'>
+let niz = "123.45";
+let stevilo = parseFloat(niz); // 123.45
+</div>
+
+<h2>Pretvorba v boolean (Boolean)</h2>
+
+<p>Boolean() funkcija:</p> 
+<div class='codeDiv'>
+let niz = "true";
+let bool = Boolean(niz); // true
+</div>
+<h2>Samodejna pretvorba (Type Coercion)</h2>
+
+<p>JavaScript lahko samodejno pretvori tipe spremenljivk v določenih situacijah.</p>
+
+<p>Primer:</p>
+<div class='codeDiv'>
+let stevilo = 123;
+let niz = "456";
+let rezultat = stevilo + niz; // "123456" (številka je pretvorjena v niz)
+</div>
+<h2>Primeri uporabe</h2>
+<div class='codeDiv'>
+// Pretvorba niza v število
+let niz = "123";
+let stevilo = Number(niz); // 123
+
+// Pretvorba števila v niz
+let stevilo2 = 456;
+let niz2 = String(stevilo2); // "456"
+
+// Pretvorba niza v boolean
+let niz3 = "true";
+let bool = Boolean(niz3); // true
+</div>
+Za več informacij o pretvorbi tipov v JavaScriptu lahko obiščete W3Schools JavaScript Type Conversion ali MDN Web Docs
+Type Conversions 12.
+
+</body>
+</html>

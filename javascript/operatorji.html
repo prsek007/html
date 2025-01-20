@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatorji</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <h1>Operatorji</h1>
+    <p>V JavaScriptu obstaja več vrst operatorjev, ki se uporabljajo za različne matematične in logične operacije. Tukaj je
+    pregled glavnih vrst operatorjev:</p>
+    
+<h2>Aritmetični operatorji</h2>
+<h3>Addition (+): Seštevanje dveh števil.</h3>
+<div class='codeDiv'>
+let a = 5 + 3; // a bo 8
+</div>
+<h3>Concatenation: Združevanje nizov ali niza s številom</h3>
+<div class='codeDiv'>
+let a = "5" + 3; // a bo '53' !! niz, ne število
+let ime = "Miha" + " " + "13" + "let"; // ime bo Miha 13 let
+</div>
+<h3>Subtraction (-): Odštevanje enega števila od drugega.</h3>
+<div class='codeDiv'>
+let b = 5 - 3; // b bo 2
+</div>
+<h3>Multiplication (*): Množenje dveh števil.</h3>
+<div class='codeDiv'>
+let c = 5 * 3; // c bo 15
+</div>
+<h3>Division (/): Deljenje enega števila z drugim.</h3>
+<div class='codeDiv'>
+let d = 15 / 3; // d bo 5
+</div>
+<h3>Modulus (%): Ostanek pri deljenju.</h3>
+<div class='codeDiv'>
+let e = 5 % 2; // e bo 1
+</div>
+<h3>Exponentiation ()**: Potenciranje.</h3>
+<div class='codeDiv'>
+let f = 2 ** 3; // f bo 8
+</div>
+<h2>Prireditveni operatorji</h2>
+<h3>Assignment (=): Prireditev vrednosti spremenljivki.</h3>
+<div class='codeDiv'>
+let x = 10;
+</div>
+<h3>Addition Assignment (+=): Dodajanje in prireditev.</h3>
+<div class='codeDiv'>
+x += 5; // x bo 15
+</div>
+<h3>Subtraction Assignment (-=): Odštevanje in prireditev.</h3>
+<div class='codeDiv'>
+x -= 3; // x bo 12
+</div>
+<h3>Multiplication Assignment (*=): Množenje in prireditev.</h3>
+<div class='codeDiv'>
+x *= 2; // x bo 24
+</div>
+<h3>Division Assignment (/=): Deljenje in prireditev.</h3>
+<div class='codeDiv'>
+x /= 4; // x bo 6
+</div>
+
+<h2>Primerjalni operatorji</h2>
+<h3>Equal to (==): Preverja, ali sta dve vrednosti enaki.</h3>
+<div class='codeDiv'>
+5 == '5'; // true
+</div>
+
+<h3>Strict Equal to (===): Preverja, ali sta dve vrednosti enaki in istega tipa.</h3>
+<div class='codeDiv'>
+5 === '5'; // false
+</div>
+<h3>Not Equal to (!=): Preverja, ali dve vrednosti nista enaki.</h3>
+<div class='codeDiv'>
+5 != '5'; // false
+</div>
+<h3>Strict Not Equal to (!==): Preverja, ali dve vrednosti nista enaki ali nista istega tipa.</h3>
+<div class='codeDiv'>
+5 !== '5'; // true
+</div>
+<h3>Greater than (&gt;): Preverja, ali je ena vrednost večja od druge.</h3>
+<div class='codeDiv'>
+5 &gt; 3; // true
+</div>
+    
+<h3>Less than (&lt;): Preverja, ali je ena vrednost manjša od druge.</h3>
+<h3></h3>
+<div class='codeDiv'>
+5 &lt; 3; // false 4.
+</div>
+
+<h2>Logični operatorji</h2>
+
+
+<h3>AND (&&): Vrača true, če sta oba izraza true.</h3>
+<div class='codeDiv'>
+true && false; // false
+</div>
+<h3>OR (||): Vrača true, če je vsaj eden od izrazov true.</h3>
+<div class='codeDiv'>
+true || false; // true
+</div>
+<h3>NOT (!): Vrača nasprotno vrednost izraza.</h3>
+<div class='codeDiv'>
+!true; // false
+</div>
+
+<h2>Ternarni operator</h2>
+
+<p>Condition ? expr1 : expr2: Vrača expr1, če je pogoj true, sicer expr2.</p>
+<div class='codeDiv'>
+let rezultat = (5 &gt; 3) ? 'večje' : 'manjše'; // rezultat bo 'večje'
+</div>
+
+Za podrobnejše informacije o operatorjih v JavaScriptu lahko obiščete W3Schools JavaScript Operators ali MDN Web Docs
+Expressions and Operators 12.
+    
+    
+
+</body>
+</html>

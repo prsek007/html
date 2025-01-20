@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samozapiralne značke</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1>Samozapiralne značke</h1>
+    <p>Nekaterer značke, kot je recimo <code>img</code> nimajo zaključne značje &lt;/img&gt;, takim značkam pravimo samozapiralne značke (self-closing tags) <code>&lt;img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png"&gt;</code>. Take značke nimajo vsebine, kot je besedilo ali druga značka, zato ne potrebujejo zapiralne značke.</p> 
+    <div><img src="https://www2.arnes.si/~iprsa/logos/logo_os_tisina_600.png" title="Logo OŠ Tišina." alt="Logotip Osnovne šole Tišina"></div>
+    <p>Take značke so še <code>br</code> in <code>hr</code>. Na primer prelom vrstice (break) <code>&lt;br&gt;</code><br>prelomi besedilo v novo vrstico. Črto (horizontal rule) pa doda značka <code>&lt;hr&gt;</code><hr> </p>
+    <p>Vidimo vmesno črto.</p>
+    <p>Tudi značka <code>&lt;input type="text" placeholder="Vnesi besedilo"&gt;</code> <input type="text" placeholder="Vnesi besedilo"> nima zaključne značke.</p>
+    <p>Take značke so tudi <code>meta</code> značke:</p>
+    <ul type="none">
+        <li><code>&lt;meta charset="UTF-8"&gt;</code></li>
+        <li><code>&lt;meta name="description" content="Opis strani"&gt;</code></li>
+        <li><code>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</code></li>
+        <li><code>&lt;meta name="author" content="Vaše ime"&gt;</code></li>
+        <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+    </ul>
+    <p>Za združljivost s starejšimi brskalniki in XML, lahko uporabimo poševnico na koncu <code>&lt;br /&gt;</code>, v HTML 5 pa to ni potrebno in se opušča.</p>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

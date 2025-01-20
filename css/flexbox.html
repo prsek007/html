@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - responsive</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+
+        @media (min-width: 600px) {
+            body {
+                background-color: rgb(94, 91, 91);
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                background-color: aliceblue;
+            }
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        .container > div {
+            background-color: rgb(5, 133, 172);
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            width: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Flexbox</h1>
+    <p>Za prikaz večihlementov vzporedno, ki se prelomijo v naslednjo vrstico, če je ožji zaslon. Uporabimo div element, ki mu določimo class npr. container <code>&lt;div class="container"</code> ter mu določimo css lastnosti:</p>
+    <code><pre>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+    </pre></code>
+    <p>S tem smo povedali, da naj se ta div element prikazuje kot flexbox element <code>display: flex;</code> ter da se naj elementi samodejno prelamljajo v novo vrstico 
+        <code>flex-wrap: wrap;</code>. Znotraj tega div elementa pa dodamo div elemente z vsebino. Tudi tem lahko določomo lastnosti npr. takole: </p>
+<code>
+    <pre>
+    .container > div {
+        background-color: rgb(5, 133, 172);
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        color: white;
+        width: 200px;
+    }
+    </pre>
+</code>
+    <div class="container">
+        <div>1. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>2. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>3. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>4. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>5. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>6. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>7. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>8. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        <div>9. preprosto besedilo znotraj flexbox elementa za prikaz delovanja flexbox lastnosti</div>
+        
+    </div>
+
+
+    
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+    ol {
+        color: red;
+    }
+    ul {
+        color: red;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>SCSS (sass)</h1>
+    <p>Razširjen css oz. scss omogoča tudi dodajanje spremenljivk. Za razliko od css datoteke, moramo dedaj datoteka s slogom shraniti s končnoco scss npr. <code>slog.scss</code>. 
+    Spremenljivke dodamo vedno preden jo uporabimo, občajno na vrhu s prespono $ (dolar) npr. <code>$barva: red;</code>, potem pa lahko to spremenljivko uporabimo namesto vrednosti npr. <br>
+<code><pre>
+    $barva: red;
+    ol {
+        color: $barva;
+    }
+    ul {
+        color: $barva;
+    }
+</pre></code></p>
+
+    <ul>
+        <li>jabolka</li>
+        <li>hruške</li>
+        <li>slive</li>
+    </ul>
+    <ol>
+        <li>ponedeljek</li>
+        <li>torek</li>
+        <li>sreda</li>
+    </ol>
+    <h2>Compile</h2>
+    <p>Ka datoteko shranimo, jo povežemo z dokumentom tako kot smo vajeni z .css datoteko &lt;ling rel="stylesheet" href="slog.css"&gt; vendar to še ne bo delovalo ker:</p>
+    <ol>
+        <li>datoteke z imenom slog.css sploh nimamo ampak imamo datoteko slog.scss</li>
+        <li>tidi če bi vnesli &lt;ling rel="stylesheet" href="slog.scss"&gt; ne bi delovalo, ker je brskalniki ne podpirajo</li>
+        <li>ker moramo datoteko slog.scss pretvoriti (prekompajlati) v datoteko slog.css</li>
+    </ol>
+    <h2>Namestitev</h2>
+    <h3>Namesti Node.js</h3>
+    <p>Povezava d namesttne za <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a>.</p>
+    <h3>Namesti sass in less</h3>
+    <p>V terminalu (command prompt oz. cmd) zaženi ukaz <code>npm install -g sass less</code>.</p>
+    <h3>Ustvari task.json</h3>
+    <p>V delovni mapi ustvarimo mapo .vscode, VS Code pa ustvarimo tasks.json datoteko <a href="https://code.visualstudio.com/docs/languages/css#_step-3-create-tasksjson" target="_blank">navodila</a>.</p>
+    <h4>Vsebina datoteke tasks.json za scss datoteko</h4>
+    <p>Zaženi Terminal > Configure Tasks and click Create tasks.json file from template ter vstavi sledečo kodo v dokument.</p>
+    <p>S Ctrl*Shift+B zaženemo tascs.json</p> 
+       <code>
+        <pre>
+// Sass configuration
+{
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+"version": "2.0.0",
+"tasks": [
+        {
+            "label": "Sass Compile",
+            "type": "shell",
+            "command": "sass styles.scss styles.css",
+            "group": "build"
+        }
+    ]
+}
+        </pre>
+    </code>
+
+    <h2>Gnezdenje</h2>
+    <p>Elemente lahko gnezdimo za bolj pregledno kodo</p>
+    <code><pre>
+        div {
+            font-size: 20px;
+            p {
+                color: green;
+            }
+            li {
+                color: blue;
+            }
+        }
+    </pre></code>
+    <h2>Dedovanje</h2>
+    <code>
+        <pre>
+%sporocilo {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}   
+.uspeh {
+    @extend %sporocilo;
+    background-color: lightgreen;
+    border: green;
+}   
+.napaka {
+    @extend %sporocilo;
+    background-color: rgb(248, 140, 167);
+    border: red;
+}   
+.opozorilo {
+    @extend %sporocilo;
+    background-color: lightcoral;
+    border: orange;
+}
+        </pre>
+    </code>
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

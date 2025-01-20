@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - responsive</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+
+        @media (min-width: 600px) {
+            body {
+                background-color: rgb(94, 91, 91);
+        }
+        @media (max-width: 500px) {
+            body {
+                background-color: aliceblue;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Viewport</h1>
+    <p>Ker vsi ekrani niso enako veliki, bi radi, da se vsebina prilagaja na velikost zaslona. V glavi html dokumenta dodamo naslednjo vrstico:</p>
+    <p><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></p>
+    <p>S tem želimo povadati, da se stran razširi po celotnem zaslonu, ne glede na to, kateri zaslon uporabljamo.</p>
+    <h2>Vrste medijev</h2>
+    <p>Tiskanje, zaslon...</p>
+    <h2>Lastnosti medijev</h2>
+    <p>višina, širina, orientacija...</p>
+    <h2></h2>
+
+
+    
+
+    <script src="script.js">
+        // tukaj pride JavaScript koda
+    </script> <!-- Povezava na zunanji JS -->
+</body>
+</html>

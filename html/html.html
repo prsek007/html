@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css"> <!-- Povezava na zunanji CSS -->
+    <style>
+
+    </style>
+
+</head>
+<body>
+<h1>HTML</h1>
+<h2>Kaj pravzaprav je html?</h2>
+<p>HTML (HyperText Markup Language) je osnovni jezik za izdelavo spletnih strani. Uporablja se za strukturiranje vsebine na
+spletu z uporabo oznak (tags), ki določajo različne elemente, kot so naslovi, odstavki, povezave, slike in drugi mediji.
+HTML je temeljni gradnik spleta, ki omogoča prikazovanje informacij na način, ki je razumljiv brskalnikom.</p>
+
+<h2>Osnovna zgradba</h2>
+    <p>&lt;!DOCTYPE html&gt;: Določa vrsto dokumenta in različico HTML-ja.</p>
+    <p>&lt;html&gt;: Koreninski element, ki vsebuje celotno HTML-dokument.
+</p>
+    <p>&lt;head&gt;: Vsebuje metapodatke o dokumentu, kot so naslov, povezave do stilov in skriptov.</p>
+    <p>&lt;title&gt;: Določa naslov dokumenta, ki se prikaže v zavihku brskalnika.</p>
+    <p>&lt;body&gt;: Vsebuje glavno vsebino dokumenta, ki se prikaže v brskalniku.</p>
+    <p>&lt;h1&gt; do &lt;h6&gt;: Oznake za naslove, kjer je &lt;h1&gt; največji naslov, &lt;h6&gt; pa najmanjši.</p>
+
+    <p>&lt;p&gt;: značka za odstavek.</p>
+    <p>&lt;a&gt;: značka za hiperpovezavo.</p>
+    <p>&lt;img&gt;: značka za vstavljanje slik.</p>
+    <p>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Oznake za neurejene in urejene sezname ter elemente seznamov.</p>
+    <h2>Uporaba pravilnih oznak</h2>
+<p>
+    Vsak HTML element se začne z začetno oznako (npr. &lt;p&gt;) in konča z zaključno oznako (npr. &lt;/p&gt;),
+razen nekaterih samozapiralnih oznak, kot je &lt;img&gt;.</p>
+    <h2>Strukturiranje dokumenta</h2>
+<p>Uporabimo oznake &lt;html&gt;, &lt;head&gt;, in &lt;body&gt; za osnovno strukturo dokumenta. 
+    V &lt;head&gt; vključite metapodatke, kot so naslov strani in povezave do stilov, v &lt;body&gt; pa glavno vsebino.</p>
+<h2>Indentacija</h2>
+<p>Za boljšo berljivost kode uporabljaj indentacijo. To pomeni, da notranje elemente zamakneš za eno
+        ali več presledkov ali tabulatorjev.</p>
+        <h2>Komentarji</h2>
+<p>Uporabljaj komentarje za dodajanje opomb v kodo, ki ne bodo vidne v brskalniku. Komentarji se pišejo
+        med &lt;!-- in --&gt;.</p>
+        <h1>Uporaba atributov</h1>
+<p>Oznake lahko vsebujejo atribute, ki dodajajo dodatne informacije. Na primer, oznaka &lt;a&gt; za
+            povezavo lahko vsebuje atribut href, ki določa URL povezave: &lt;a href="https://www.example.com"&gt;Povezava&lt;/a&gt;.</p>
+<h2>Preverjanje napak</h2>
+            <p>Redno preverjaj svojo kodo za napake. Brskalniki imajo orodja za razvijalce, ki ti lahko
+            pomagajo pri iskanju in odpravljanju napak.</p>
+<h2>Validacija</h2>
+<p>Uporabi orodja za validacijo HTML kode, kot je W3C Validator, da preveriš, ali je tvoja koda
+            skladna s standardi.</p>
+<h2>Pogoste napake</h2>
+<p>Pri pisanju HTML kode se pogosto pojavljajo naslednje napake:</p>
+<dl>
+    <dt>Manjkajoče zaključne oznake</dt>
+        <dd>Pozabljanje na zaključne oznake (npr. `&lt;/p&gt;`, `&lt;/div&gt;`) lahko povzroči nepravilno
+    prikazovanje vsebine.</dd>
+    <dt>Nepravilna gnezdenja oznak</dt>
+        <dd>Oznake morajo biti pravilno gnezdene. Na primer, oznaka `&lt;p&gt;` ne sme vsebovati oznake
+        `&lt;div&gt;`.</dd>
+    <dt>Uporaba zastarelih oznak</dt>
+        <dd>Nekatere oznake, kot so `&lt;font&gt;` in `&lt;center&gt;`, so zastarele in jih ne bi smeli
+                uporabljati. Namesto tega uporabite CSS za oblikovanje.</dd>
+    <dt>Manjkajoči atributi</dt>
+        <dd>Nekatere oznake zahtevajo določene atribute. Na primer, oznaka `&lt;img&gt;` mora
+                imeti atribut `src` za določitev vira slike in `alt` za alternativni opis.</dd>
+    <dt>Nepravilna uporaba atributov</dt>
+        <dd>Atributi morajo biti pravilno zapisani znotraj začetne oznake in v
+                narekovajih. Na primer, `&lt;a href='https://www.example.com'&gt;` je pravilno.</dd>
+    <dt>Pozabljeni komentarji</dt>
+        <dd>Komentarji morajo biti pravilno zaprti. Nepravilno zaprt komentar lahko
+                    povzroči težave pri prikazovanju strani.</dd>
+    <dt>Neveljavna struktura dokumenta</dt>
+    <dd>HTML dokument mora imeti pravilno strukturo z oznakami `&lt;html&gt;`,
+                    `&lt;head&gt;`, in `&lt;body&gt;`.</dd>
+    <dt>Uporaba inline stilov</dt>
+        <dd>Namesto uporabe inline stilov (npr. `&lt;p style="color: red;"&gt;`), je bolje uporabiti zunanje ali notranje CSS datoteke za boljšo organizacijo in vzdrževanje kode.</dd>
+    <dt>Manjkajoči ali nepravilni meta podatki</dt>
+        <dd>Meta podatki, kot so `&lt;title&gt;` in ` &lt;meta charset="UTF-8"&gt;`, so pomembni za pravilno delovanje in optimizacijo strani.</dd>
+    <dt>Neveljavna ali manjkajoča doctype deklaracija</dt>
+    <dd>Doctype deklaracija (`&lt;!DOCTYPE html&gt;`) mora biti na začetku vsakega HTML dokumenta, da brskalnik ve, katero
+    različico HTML-ja uporablja.</dd>
+</dl>
+
+<p>Če se izogibaš tem pogostim napakam, bo tvoja HTML koda bolj čista, pravilna in enostavna za vzdrževanje.</p>
+    <script src="script.js"></script>
+</body>
+</html>  

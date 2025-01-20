@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vejitev</title>
+    <link rel="stylesheet" href="../html/style.css"> <!-- Povezava na zunanji CSS -->
+
+</head>
+<body>
+
+<h1>Vejitev</h1>
+<p>Vejitev (pogojni stavki) v programiranju omogoča, da program sprejema odločitve in izvaja različne dele kode glede na
+določene pogoje. V JavaScriptu se za vejitev najpogosteje uporabljajo stavki <code>if</code> , <code>else if</code> in <code>else</code>.</p>
+<h2>Primeri</h2>
+<h3>if stavek</h3>
+<p>Uporablja se za preverjanje pogoja. Če je pogoj resničen (true), se izvede koda znotraj bloka if.</p>
+<div class="codeDiv">
+let starost = 18;
+
+if (starost >= 18) {
+    console.log("Polnoleten si.");
+}
+// Izpiše: Polnoleten si.    
+</div>
+
+<h3>else stavek</h3>
+<p>Uporablja se skupaj z if stavkom za definiranje kode, ki se izvede, če pogoj v if stavku ni resničen (false).</p>
+<div class="codeDiv">
+let starost = 16;
+
+if (starost >= 18) {
+    console.log("Polnoleten si.");
+} else {
+    console.log("Nisi še polnoleten.");
+}
+// Izpiše: Nisi še polnoleten.
+</div>
+<h3>else if stavek</h3>
+<p>Uporablja se za preverjanje dodatnih pogojev, če prejšnji pogoji niso resnični.</p>
+<div class="codeDiv">
+let ura = 15;
+
+if (ura &lt; 12) {
+    console.log("Dobro jutro!");
+ } else if (ura &lt; 18) {
+    console.log("Dober dan!");
+ } else {
+    console.log("Dober večer!");
+ } // Izpiše: Dober dan!
+</div>
+<h3>Gnezdeni pogoji</h3>
+<p>Pogoje lahko tudi gnezdimo, kar pomeni, da imamo en pogoj znotraj drugega.</p>
+<div class="codeDiv">
+let ura=10;
+let dan="ponedeljek";
+if (ura &lt; 12) {
+    if (dan === "ponedeljek" ) {
+        console.log("Dobro jutro, ponedeljek!");
+    } else {
+        console.log("Dobro jutro!");
+    }
+} else { console.log("Dober dan!");
+} // Izpiše: Dobro jutro, ponedeljek!
+
+<p>Vejitev omogoča, da programi postanejo bolj dinamični in prilagodljivi, saj lahko sprejemajo odločitve na</p>
+<h2>ternarni operator</h2>
+<p>Ternarni operator, znan tudi kot pogojni operator, je kratek način za zapisovanje preprostih pogojnih stavkov v
+JavaScriptu. Uporablja se lahko namesto if-else stavkov, kadar želimo zapisati pogoj in dve možni vrednosti v eni
+vrstici. Sintaksa ternarnega operatorja je:</p>
+
+<p><code>pogoj ? vrednost_če_resnično : vrednost_če_napačno;</code></p>
+
+<h3>Primeri</h3>
+<h4>Preprosti pogoji</h4>
+<p>Ko imamo preprost pogoj, ki določa eno od dveh vrednosti.</p>
+<div class="codeDiv">
+let starost = 18;
+let status = (starost >= 18) ? "Polnoleten" : "Mladoleten";
+console.log(status); // Izpiše: Polnoleten
+</div>
+<h4>Privzete vrednosti</h4>
+<p>Ko želimo določiti privzeto vrednost, če je spremenljivka undefined ali null.</p>
+<div class="codeDiv">
+let ime = null;
+let prikazanoIme = ime ? ime : "Gost";
+console.log(prikazanoIme); // Izpiše: Gost
+</div>
+<h4>Kratki izrazi</h4>
+<p>Ko želimo ohraniti kodo kratko in berljivo.</p>
+
+<div class="codeDiv">
+let ura = 10;
+let pozdrav = (ura &lt; 12) ? "Dobro jutro" : "Dober dan";
+    console.log(pozdrav); // Izpiše: Dobro jutro
+</div>
+<h4>Vrednosti v funkcijah</h4>
+<p>Ko želimo vrniti vrednost na podlagi pogoja znotraj funkcije.</p>
+<div class="codeDiv">
+function preveriStarost(starost) { 
+    return (starost >= 18) ? "Polnoleten" : "Mladoleten";
+}
+
+console.log(preveriStarost(20)); // Izpiše: Polnoleten
+</div>
+<p>Ternarni operator je zelo uporaben za preproste pogoje, saj omogoča krajši in bolj jedrnat zapis. Vendar pa ga je
+    bolje uporabiti le za enostavne primere, saj lahko preveč zapleteni ternarni izrazi zmanjšajo berljivost kode. Če
+    imaš še kakšno vprašanje ali potrebuješ dodatne primere, mi sporoči!</p>
+    
+</body>
+</html>

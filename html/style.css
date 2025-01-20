@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(247, 237, 225);
+    color:#222222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+p {
+    font-size: large;
+}
+h1 {
+    text-align: center;
+    color: #f84b02;
+}
+h2 {
+    color: #064780;
+}
+
+code {
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.codeDiv {
+    font-size: 1.3em;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px gray;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 1.2em;
+    white-space: pre-wrap;
+    /* Allow text to wrap normally */
+    font-family: monospace;
+    overflow-wrap: anywhere;
+    /* Ensures text breaks at any point if needed */
+    word-break: break-word;
+    /* Forces breaks for long words */
+    max-width: 100%;
+    /* Prevents overflow by constraining width */
+    box-sizing: border-box;
+    /* Includes padding and border in width */
+    overflow-x: auto;
+    /* Adds horizontal scrolling as a fallback */
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+dl {
+    word-wrap: break-word;    /* Prelom besed, ki so predolge */
+    overflow-wrap: break-word;    /* Alternativa za novejše brskalnike */
+}
+dt {
+    font-size: 1.1em;
+    font-weight: 700;
+    font-style: italic;
+    word-wrap: break-word;
+}
+dd {
+    white-space: pre-wrap;
+    word-wrap: break-word;        /* Prelom besed, ki so predolge */
+    overflow-wrap: break-word;        /* Alternativa za novejše brskalnike */
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 0;
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media print {
+
+    /* Skrijte elemente, ki jih ne želite tiskati */
+    .no-print {
+        display: none;
+    }
+
+    /* Prilagodite velikost pisave za tiskanje */
+    body {
+        font-size: 12pt;
+        background-color: none;
+        color: #111;
+    }
+    .codeDiv {
+        font-size: 1em;
+    }
+
+    /* Nastavite robove za tiskanje */
+    @page {
+        margin: 1cm;
+    }
+
+    /* Prilagodite barve za tiskanje */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
